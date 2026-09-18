@@ -25,7 +25,11 @@ export function useScrollJourney({
   const tactilYRef = useRef<number | null>(null)
 
   useEffect(() => {
+    const dentroDeLaCarta = (objetivo: EventTarget | null) =>
+      objetivo instanceof Element && Boolean(objetivo.closest('.carta'))
+
     const alRuedaMover = (e: WheelEvent) => {
+      if (dentroDeLaCarta(e.target)) return
       e.preventDefault()
       setProgreso((p) => clamp(p + e.deltaY * sensibilidadRueda))
     }
@@ -35,6 +39,7 @@ export function useScrollJourney({
     }
 
     const alTocarMover = (e: TouchEvent) => {
+      if (dentroDeLaCarta(e.target)) return
       e.preventDefault()
       const y = e.touches[0].clientY
       const anterior = tactilYRef.current ?? y

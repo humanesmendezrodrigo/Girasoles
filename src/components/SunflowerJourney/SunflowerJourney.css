@@ -4,7 +4,8 @@
   overflow: hidden;
   perspective-origin: 50% 42%;
   background: var(--tierra-2);
-  touch-action: none;
+  /* El gesto se controla por JS fuera de la carta; la carta conserva su scroll nativo. */
+  touch-action: pan-y;
 }
 
 /* El mundo 3D: contiene todos los girasoles que "viajan" con el scroll */
