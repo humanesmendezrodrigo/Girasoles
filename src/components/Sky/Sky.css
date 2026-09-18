@@ -1,0 +1,53 @@
+.cielo {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--cielo-1) 0%,
+    var(--cielo-2) 32%,
+    var(--cielo-3) 56%,
+    var(--cielo-4) 72%,
+    var(--tierra-1) 80%,
+    var(--tierra-2) 100%
+  );
+}
+
+.sol {
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  width: 220px;
+  height: 220px;
+  margin: -110px 0 0 -110px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--sol) 0%, rgba(255, 210, 120, 0.55) 45%, rgba(255, 180, 90, 0) 72%);
+  filter: blur(1px);
+  will-change: transform, opacity;
+}
+
+.polvo span {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(255, 240, 210, 0.55);
+  animation: polvo-flotar 7s ease-in-out infinite;
+}
+
+@keyframes polvo-flotar {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateY(-18px);
+    opacity: 0.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .polvo span {
+    animation: none;
+  }
+}

@@ -1,0 +1,20 @@
+.terreno {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 66%;
+  overflow: hidden;
+  /* surcos: franjas finas que "abren en abanico" desde el punto del horizonte */
+  background: repeating-conic-gradient(
+    from -90deg at 50% 0%,
+    #3a2413 0deg 1.4deg,
+    #241407 1.4deg 2.8deg
+  );
+}
+
+.terreno__viñeta {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 88%);
+}

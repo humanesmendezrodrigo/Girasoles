@@ -1,0 +1,24 @@
+:root {
+  --cielo-1: #241046;
+  --cielo-2: #5a1e58;
+  --cielo-3: #b8406b;
+  --cielo-4: #e2854a;
+  --tierra-1: #3a2413;
+  --tierra-2: #1c1208;
+  --sol: #fff3c4;
+  --texto-carta: #f6ead0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* el scroll lo maneja useScrollJourney, no la página */
+  background: var(--tierra-2);
+  font-family: Georgia, 'Iowan Old Style', serif;
+}

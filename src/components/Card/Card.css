@@ -1,0 +1,73 @@
+.carta-capa {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6vh 6vw;
+  background: radial-gradient(ellipse at center, rgba(20, 10, 5, 0) 0%, rgba(15, 8, 4, 0.55) 100%);
+  transition: opacity 0.5s ease;
+  z-index: 3;
+}
+
+.carta {
+  max-width: 620px;
+  width: 100%;
+  max-height: 86vh;
+  overflow-y: auto;
+  background: rgba(30, 18, 6, 0.78);
+  border: 1px solid rgba(255, 215, 140, 0.25);
+  border-radius: 6px;
+  padding: 2.6rem 2.4rem;
+  color: var(--texto-carta);
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+
+.carta__fecha {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(246, 234, 208, 0.7);
+  margin-bottom: 1rem;
+}
+
+.carta h1 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0 0 1.3rem;
+  font-style: italic;
+}
+
+.carta p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin: 0 0 1rem;
+  text-align: left;
+  color: rgba(246, 234, 208, 0.92);
+}
+
+.carta__firma {
+  margin-top: 1.2rem;
+  font-style: italic;
+  text-align: right;
+  color: rgba(255, 214, 150, 0.9);
+}
+
+.carta__volver {
+  margin-top: 1.6rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(246, 234, 208, 0.45);
+}
+
+@media (max-width: 600px) {
+  .carta {
+    padding: 2.1rem 1.6rem;
+  }
+  .carta h1 {
+    font-size: 1.4rem;
+  }
+}

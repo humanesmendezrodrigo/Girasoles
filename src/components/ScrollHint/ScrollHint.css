@@ -1,0 +1,41 @@
+.scroll-hint {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 6%;
+  text-align: center;
+  color: #f6ead0;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+.scroll-hint__flecha {
+  display: block;
+  margin: 0.6em auto 0;
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid #f6ead0;
+  border-bottom: 2px solid #f6ead0;
+  transform: rotate(45deg);
+  animation: scroll-hint-rebote 1.6s ease-in-out infinite;
+}
+
+@keyframes scroll-hint-rebote {
+  0%,
+  100% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-hint__flecha {
+    animation: none;
+  }
+}
